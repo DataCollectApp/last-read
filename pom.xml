@@ -39,7 +39,7 @@
     <repository>
       <id>github-datacollectapp</id>
       <name>GitHub Data Collector Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/DataCollectApp</url>
+      <url>https://maven.pkg.github.com/DataCollectApp/X</url>
     </repository>
   </repositories>
 
