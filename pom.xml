@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>app.datacollect</groupId>
+  <artifactId>last-read</artifactId>
+  <version>0.1.0</version>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-dependencies</artifactId>
+    <version>2.2.2.RELEASE</version>
+  </parent>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <java.version>13</java.version>
+
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+
+    <time.version>0.1.0</time.version>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>central</id>
+      <url>https://repo1.maven.org/maven2</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>github-datacollectapp</id>
+      <name>GitHub Data Collector Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/DataCollectApp</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+
+    <!-- Database -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jdbc</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Utility -->
+    <dependency>
+      <groupId>app.datacollect</groupId>
+      <artifactId>time</artifactId>
+      <version>${time.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+  </dependencies>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub DataCollectApp Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/DataCollectApp/last-read</url>
+    </repository>
+  </distributionManagement>
+
+</project>
