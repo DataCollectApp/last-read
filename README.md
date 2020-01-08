@@ -6,8 +6,9 @@ Create table to store markers:
 ```sql
 CREATE TABLE last_read
 (
-    name VARCHAR(64) NOT NULL,
-    id   VARCHAR(64) NOT NULL
+    name         VARCHAR(64) NOT NULL,
+    id           VARCHAR(64) NOT NULL,
+    updated_time VARCHAR(64) NOT NULL
 );
 ```
 Make sure you have the following dependencies:
